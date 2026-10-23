@@ -1,0 +1,11 @@
+.streamlit/secrets.toml
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.bak
+app_backup.py
+.DS_Store
+pcards.db
