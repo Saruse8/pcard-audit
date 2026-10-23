@@ -546,6 +546,8 @@ st.write(
     "potentially prohibited purchases."
 )
 
+ensure_database()
+
 if not DATABASE.is_file():
     st.error(
         "Database not found. Place pcards.db "
