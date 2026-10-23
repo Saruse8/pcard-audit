@@ -409,7 +409,7 @@ def execute_ai_query(sql):
         if action == sqlite3.SQLITE_READ:
             if (
                 str(arg1).lower() == "pcards"
-                and db_name == "main"
+                and db_name in (None, "main")
             ):
                 return sqlite3.SQLITE_OK
 
