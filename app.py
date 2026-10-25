@@ -685,6 +685,8 @@ with tab_dashboard:
         "of prohibited purchases."
     )
 
+    st.info("How to use: Select one or more years, enter keywords in the Description and/or Vendor fields, and click Search Transactions. When both fields are used, transactions must match both conditions. Review the results to identify purchases requiring further investigation.")
+
     try:
         summary = get_database_summary()
 
