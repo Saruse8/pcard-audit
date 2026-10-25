@@ -1,5 +1,7 @@
 # OSU Purchasing Card Audit
 
+**Live Application:** https://pcard-audit-ka3gxcfzzcshne6lw2hgqy.streamlit.app
+
 ## Project Overview
 
 This project is a web-based purchasing card (P-card) audit application developed as part of the **AI in Accounting and Business** course at the University of Southern Denmark (SDU).
@@ -34,4 +36,47 @@ Users can:
 
 - Select one or more years.
 - Search transaction descriptions using keywords.
-- Search vendor names
+- Search vendor names using keywords.
+- Combine Description and Vendor filters.
+- Review matching transactions and associated spending.
+
+Keyword matches indicate **potential policy exceptions**, not confirmed violations. Further investigation is required before drawing conclusions.
+
+## Technologies Used
+
+- **Python** – Application development and data processing
+- **Streamlit** – Interactive web interface
+- **SQLite** – Transaction database
+- **Google Gemini API** – Natural-language-to-SQL generation
+- **Pandas** – Data analysis and result presentation
+- **SQLGlot** – SQL parsing and validation
+
+## Security
+
+The Gemini API key is managed through Streamlit Secrets and is not included in the source code.
+
+The application restricts database queries to read-only operations.
+
+## Running the Application Locally
+
+1. Clone the repository.
+2. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Configure your Gemini API key using Streamlit Secrets.
+4. Start the application:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+The application initializes its local SQLite database from the included `pcards.zip` file.
+
+## Academic Context
+
+Developed for the *Analytics Mindset – P-card* case study as part of the AI in Accounting and Business course at SDU.
+
+The application is intended for educational and audit-analysis purposes. Flagged transactions should not be interpreted as evidence of fraud or misconduct without further examination.
